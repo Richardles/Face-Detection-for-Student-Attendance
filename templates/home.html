@@ -1,0 +1,13 @@
+{%extends "base.html"%}
+{%block content%}
+
+<h1>Hello World!!</h1>
+{% if request.method == 'GET' %}
+<form method="get">
+    <input type="file" name="file" id="" multiple>
+    <input type="submit" value="Check Attendance">
+</form>
+{% endif %}
+
+{{ request.user.is_authenticated }}
+{%endblock%}
